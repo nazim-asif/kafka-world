@@ -1,0 +1,7 @@
+Start Zookeeper: zookeeper-server-start.bat config\zookeeper.properties
+
+Start Kafka: kafka-server-start.bat config\server.properties
+
+Create Topic: kafka-topics --zookeeper 127.0.0.1:2181 --topic first_topic --create --partitions 3 --replication-factor 1
+
+run consumer: D:\kafka\practice\kafka_2.12-3.1.0\bin\windows>kafka-console-consumer.bat --bootstrap-server 127.0.0.1:9092 --topic first_topic
